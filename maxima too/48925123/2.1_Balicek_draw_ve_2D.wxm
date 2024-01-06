@@ -1,0 +1,186 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: title   start ]
+2.1 Balíček draw ve 2D
+   [wxMaxima: title   end   ] */
+
+/* [wxMaxima: comment start ]
+Příloha k bakalářské práci
+Grafika v systému počítačové algebry Maxima
+Mikuláš Múdry, Masarykova univerzita, Brno 2014
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(explicit(x+sin(x),x,-5*%pi,5*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(explicit(1/x,x,-4,4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(xrange=[-7,7], yrange=[-7,7], grid=true,
+explicit(1/x,x,-4,4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(yrange=[-2,2], 
+explicit(signum(x),x,-2,2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(yrange=[-2,2], 
+explicit(signum(x),x,-2,-0.001),
+explicit(signum(x),x,0.001,2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(parametric(4*cos(t),sin(t),t,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(user_preamble="set size ratio 1", 
+xrange=[-5,5], yrange=[-5,5], nticks=400, 
+parametric(4*cos(t),sin(t),t,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(implicit(exp(x+y)=cos(x-y*x^2), x, -6, 2, y, -6, 2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(ip_grid=[100,100], 
+implicit(exp(x+y)=cos(x-y*x^2), x, -6, 2, y, -6, 2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(polar((phi)^2,phi,0,12*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(nticks=1000, user_preamble="set grid polar",
+polar((phi)^2,phi,0,12*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(background_color=yellow, color="#FF0000", 
+explicit(sin(x^3),x,-4,4), color=light-green, line_width=4, 
+explicit(x^3,x,-2,2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(yrange=[-20,20], filled_func=true, fill_color=purple,
+explicit(tan(x),x,-3/2*%pi,3/2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(fill_color=cyan, filled_func=cos(x),
+explicit(cos(x)-1,x,-%pi,%pi), 
+fill_color=yellow, explicit(cos(8*x)/4+1,x,0,%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(xrange=[0,7], yrange=[-4,4], 
+fill_color=green, fill_density=0.2, 
+bars([1,3.8,1.2],[3,0,1.2],[5,sqrt(12),-1.2]),
+fill_color=orange, fill_density=0.8,
+bars([2,-%e,0.5],[4,%pi,-0.5],[6,-4,0]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(xrange=[0,10], yrange=[0,9], 
+points_joined=true, line_width=3,
+points([1,1.5,2,2.5,3,4,5,7,9],[1,5,5,6,8,7,4,2,3]),
+points_joined=false, point_size=6, point_type=7, color=gold,
+points([1,4,8.5,6,5,3.5,1.5,3,3]),
+color=red,
+points(matrix([7,7],[8,8],[9,7],[8,6])));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(xrange=[0,20], yrange=[0,20],
+color=brown, fill_color=dark-pink, line_width=5,
+rectangle([2,19],[19,16]),
+border=false,
+polygon([[2,6],[3,9],[6,9],[8,5],[5,5],[4,2]]),
+color=green, fill_color=forest-green, border=true,
+ellipse(5,13,4,2,280,-300),
+quadrilateral([11,3],[16,9],[17,9],[17,3]),
+color=gray, fill_color=dark-yellow,
+ellipse(4,12.5,6,3,280,60),
+transparent=true, line_type=dots,
+triangle([18,13],[18,2],[8,2]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(grid=true,
+region(x^2+y^2<=16 and not(x^2+y^2<9), x,-5, 5, y, -5, 5));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(grid=true, x_voxel=50, y_voxel=50,
+region(x^2+y^2<=16 and not(x^2+y^2<9), x,-5, 5, y, -5, 5));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(grid=true, xrange=[0,20],yrange=[0,20],
+image(matrix([8,-8,9,4,0],[1,-9,-10,-8,-10],[6,3,1,5,-3],
+[2,1,-1,-8,5],[7,3,4,-1,7]),5,5,10,10));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(xrange=[-2,3],yrange=[-2,2], grid=true,
+head_length=0.2,
+head_both=true, label_orientation=vertical,
+vector([-1,0],[1,0]), label(["Dva koreny",-1/2,-1]),
+head_both=false, label_alignment=left, label_orientation=horizontal,
+vector([1,-1],[0,1]), label(["Treti koren",1,-1]),
+head_angle=20, head_type=nofilled, label_alignment=right,
+vector([1/2,1],[-1/2,-1]), label(["Inflexni bod",1/2,1]),
+explicit(x^3-x,x,-2,2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(title="Tri funkce",
+key="f1", 
+explicit(x^2,x,0,1),
+key="f2", color="green",
+explicit(3*x,x,0,1/4), key="",
+explicit(-x+1,x,1/4,1/2),
+explicit(x,x,1/2,1),
+color=red, key="f3",
+explicit(sqrt(x),x,0,1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(xlabel="Cas", ylabel="Znecisteni",
+xaxis=true, xaxis_type=solid, xaxis_color=light-blue,
+yaxis=true, yaxis_width=4,
+implicit(2*y=exp(x),x,-1,2,y,-1,4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(xrange=[0,8], yrange=[-2,7],
+xaxis=true, xtics_axis=true, 
+xtics={["2011",1],["2012",3],["2013",5],["2014",7]},
+ytics=[0,3/2,6], ytics_rotate=true,
+fill_color=coral, fill_density=0.7,
+bars([1,6,1],[3,4,1],[5,1,1],[7,3,1]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw2d(axis_top=false, axis_bottom=false, axis_left=false, 
+axis_right=false, xtics=false, ytics=false, proportional_axes=xy, 
+line_width=7, color=black, fill_color=plum,
+ellipse(2,4,1,1,240,300),
+border=false, fill_color=skyblue,
+triangle([1,1],[5,2],[4,7]));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,60 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: title   start ]
+3.0 VTK
+   [wxMaxima: title   end   ] */
+
+/* [wxMaxima: comment start ]
+Příloha k bakalářské práci
+Grafika v systému počítačové algebry Maxima
+Mikuláš Múdry, Masarykova univerzita, Brno 2014
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw_renderer: vtk;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(color=orange, 
+explicit(sin(log(x^2+y^2)), x, -3, 3, y, -3, 3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d=true, palette=gray, line_width=4, nticks=400,
+parametric(t*cos(t), sin(3*t), t, t, 0, 6*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d=true, xu_grid=20, yv_grid=60,
+palette=[0,0,20],
+cylindrical(1,z,-10,10,phi,0,2*%pi),
+palette=[30,14,0],
+cylindrical(3,z,-3,3,phi,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d=true, xu_grid=50, yv_grid=50,
+palette=[14,0,0], opacity=0.6,
+spherical(3/2, phi, 0, 7/4*%pi, theta, 0, %pi),
+palette=[0,24,18], opacity=1,
+cylindrical(1/(z^2+1), z, -3, 3, phi, 0, 2*%pi),
+palette=gray, opacity=0.2,
+explicit(-3/2, x, -3/2, 3/2, y, -3/2, 3/2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(axis_3d=false, color=yellow, opacity=0.7,
+sphere(4,[0,-3,0],40,40,0,360,0,90, false),
+cone(7,3,[1,5,6],[1,1,3],4,true),
+color=magenta, opacity=1,
+cylinder(4,1,[5,-1,0],60,false),
+cube(8,1,2,[1,1,1]));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

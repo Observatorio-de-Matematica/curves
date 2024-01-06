@@ -1,0 +1,193 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: title   start ]
+2.2 Balíček draw ve 3D
+   [wxMaxima: title   end   ] */
+
+/* [wxMaxima: comment start ]
+Příloha k bakalářské práci
+Grafika v systému počítačové algebry Maxima
+Mikuláš Múdry, Masarykova univerzita, Brno 2014
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(explicit(sin(x^2+x-y^2),x, -3, 3, y, -3, 3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true,
+explicit(sin(x^2+x-y^2),x, -3, 3, y, -3, 3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true,
+xu_grid=70, yv_grid=70,
+explicit(sin(x^2+x-y^2),x, -3, 3, y, -3, 3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(parametric((cos(u))^2, 1/2*sin(2*u), sin(u), 
+u,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(nticks=300,
+parametric((cos(u))^2, 1/2*sin(2*u),  sin(u), u,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true,
+implicit(x^2-y^2+z^2=5, x,-10,10,y,-10,10,z,-10,10));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true,
+x_voxel=15, y_voxel=15, z_voxel=15, view=[80,75], 
+implicit(x^2-y^2+z^2=5, x,-10,10,y,-10,10,z,-10,10));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true,
+parametric_surface(cosh(u)*cos(v), cosh(u)*sin(v), 
+u, u,-2,2, v,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, 
+xu_grid=90, yv_grid=50,
+parametric_surface(cosh(u)*cos(v), cosh(u)*sin(v), 
+u, u,-2,2, v,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, 
+xrange=[0,4], yrange=[0,4], zrange=[0,2], xu_grid=90, yv_grid=50,
+parametric_surface(cosh(u)*cos(v), cosh(u)*sin(v), 
+u, u,-2,2, v,0,2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, 
+xu_grid=50, yv_grid=100,
+cylindrical(phi*exp(z), z, 0, 5, phi, 0, 6*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, view=[55,300], 
+xu_grid=50, yv_grid=50,
+spherical(cos(phi), phi, 0, 2*%pi, theta, %pi/4, 3/4*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, view=[75,75],  
+contour=both, contour_levels=[0,1/2,3],
+cylindrical(z*cos(phi), z, 0, 5, phi, 0, 7/8*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, palette=[16,5,22], 
+xu_grid=60, yv_grid=60,
+explicit(sin(x*y)/y, x, -3, 3, y, -3, 3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(point_size=2, point_type=10, color=red,
+points([[4,2,4],[2,6,3],[5,6,2],[6,2,5],[6,4,5],[3,2,6],[2,2,5]]),
+points_joined=true, point_size=1, point_type=5, line_type=dots, 
+color=grey, 
+points(
+[7,7,1,1,1,1,7,7,7], 
+[1,7,7,1,1,7,7,1,1], 
+[1,1,1,1,7,7,7,7,1]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, palette=[25,14,4],
+view=[30,190], xu_grid=50, yv_grid=50, tube_extremes=[open,closed], 
+tube(t, t^2, sin(t), sin(t/3), t, 0, 2*%pi),
+quadrilateral([2,25,-2],[2,10,-2],[6,25,-2],[6,10,-2]),
+triangle([2,0,-3],[0,5,-3],[0,0,0]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, palette=[25,14,4],
+view=[30,190], xu_grid=50, yv_grid=50, tube_extremes=[open,closed], 
+tube(t, t^2, sin(t), sin(t/3), t, 0, 2*%pi),
+quadrilateral([2,25,-2],[2,10,-2],[6,25,-2],[6,10,-2]),
+triangle([2,0,-3],[0,5,-3],[0,0,0]));draw3d(surface_hide=true, line_width=3, color=cyan, 
+elevation_grid(matrix(
+[0,7,8,5],
+[4,7,8,6],
+[3,4,6,2],
+[7,0,3,5]),0,0,4,4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(color=dark-magenta, point_type=12,
+points([1,2,4,5,7],[1,2,1,0,1],[5,7,6,4,5]),
+vector([1,1,5],[1,1,2]),
+vector([2,2,7],[5,-1,-2]),
+vector([1,1,5],[3,0,1]),
+vector([4,1,6],[1,-1,-2]),
+vector([5,0,4],[2,1,1]),
+vector([1,1,5],[6,0,0]),
+line_type=dots,
+vector([4,1,6],[-2,1,1]),
+label(["Tok v siti",2,0.5,5],["S",0.5,1,5],["T",7.5,1,5],
+["2|2",5,1,5.5]),
+label_orientation=vertical,
+label(["5|0",2.6,1.5,6.3]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true,
+xu_grid=70, yv_grid=70, ztics=[-1,1,1],
+explicit(sin(x^2+x-y^2),x, -3, 3, y, -3, 3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(surface_hide=true, enhanced3d=true, colorbox=false, 
+palette=[31,15,22], view=[70,30], title="Kvetina",
+xtics=false, ytics=false, zaxis=true, zaxis_width=3, 
+ztics={["Stonek",-1/2],["Kvet 1",2],["Kvet 2",6]}, ztics_axis=true,
+axis_3d=false,
+xu_grid=70, yv_grid=70,
+cylindrical(z+sin(6*phi), z, -2, 6, phi, 0, 2*%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d=true, colorbox=false, palette=[-6,18,22],
+view=[40,30], zrange=[1/2,3/2], title="Kompas", 
+xtics=false, ytics=false, ztics=false, axis_3d=false,
+xu_grid=60, yv_grid=60,
+tube(cos(t), sin(t), 1, 0.05, t, 0, 2*%pi),
+head_both=true, color=navy,
+vector([0,-3/4,1],[0,3/2,0]),
+vector([-3/4,0,1],[3/2,0,0]),
+vector([1/4,-1/4,1],[-1/2,1/2,0]),
+vector([-1/4,-1/4,1],[1/2,1/2,0]),
+label(["N",0,3/4,1],["S",0,-3/4,1],["E",3/4,0,1],["W",-3/4,0,1],
+["NE",1/3,1/3,1],["NW",-1/3,1/3,1],["SE",1/3,-1/3,1],
+["SW",-1/3,-1/3,1]),
+head_both=false, line_width=5, color=red,
+vector([1/4,-3/4,1],[-1/2,3/2,0]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw(columns=2, 
+gr3d(surface_hide=true, enhanced3d=true, colorbox=false, 
+title="Celkovy pohled", xlabel="x", ylabel="y", zlabel="z",
+xtics=6, ytics=6, ztics=6, x_voxel=30, y_voxel=30,
+implicit(z^3=4*sin(2*x)+2*y, x, -6, 6, y, -6, 6, z, -6, 6)),
+gr2d(allocation=[[1/2,0],[1/2,2/3]], title="Rez rovinou y=0", 
+xlabel="x", ylabel="z", xtics=6, ytics=6, 
+implicit(z^3=4*sin(2*x), x, -6, 6, z, -6, 6)));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

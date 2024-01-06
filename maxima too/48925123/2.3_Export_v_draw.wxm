@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: title   start ]
+2.3 Export v draw
+   [wxMaxima: title   end   ] */
+
+/* [wxMaxima: comment start ]
+Příloha k bakalářské práci
+Grafika v systému počítačové algebry Maxima
+Mikuláš Múdry, Masarykova univerzita, Brno 2014
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d=true, 
+explicit(x-y^3, x, -4, 4, y, -4, 4),
+terminal=pdf, file_name="grafy/Graf1", dimensions=[1000,1000]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

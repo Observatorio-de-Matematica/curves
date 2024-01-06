@@ -1,0 +1,38 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: title   start ]
+1.2 Plot ve 3D
+   [wxMaxima: title   end   ] */
+
+/* [wxMaxima: comment start ]
+Příloha k bakalářské práci
+Grafika v systému počítačové algebry Maxima
+Mikuláš Múdry, Masarykova univerzita, Brno 2014
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(sin(x)*sin(y),[x,-2*%pi,2*%pi],[y,-2*%pi,2*%pi]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(sin(x)*sin(y),[x,-2*%pi,2*%pi],[y,-2*%pi,2*%pi],
+[grid,70,70]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d([cos(u), sin(u), u*v], [u,0,%pi], [v,0,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(log(x)*log(y), [x,0.1,10], [y,0.1,10], 
+[azimuth, 200],[elevation, 85]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+contour_plot(cos(x)*cos(y), [x,-7,7], [y,-7,7], 
+[grid, 60, 60], [gnuplot_preamble, "set size ratio 1"]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,117 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: input   start ] */
+/* Hyperboloid */
+wxplot3d(sqrt(x^2+y^2-1),[x,-5,5], [y,-5,5]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Hyperboloid */
+wxplot3d([(sqrt(1+y^2))*cos(x),(sqrt(1+y^2))*sin(x),y],[x,0,2*%pi],[y,-10,10],[plot_format,xmaxima], [box,false],[palette,[hue, 0.5, 0.8, 0.8, 0.2]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Hyperboloid */
+wxplot3d([cosh(x)*cos( y),cosh(x)*sin( y),sinh(x)],[x,-2,2], [y,0,2*%pi], [plot_format,xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Paraboloid */
+wxplot3d([(sqrt(-y))*cos(x),(sqrt(-y))*sin(x),y], [x,0,2*%pi],[y,-10,0],[plot_format,xmaxima],[box,false], [palette,[hue, 0.9, 0.8, 0.8, 0.1]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Cone */
+wxplot3d([y*cos(x),y*sin(x),y], [x,0,2*%pi],[y,-10,10],[plot_format,xmaxima],[box,false], [palette,[hue, 0.1, 0.8, 0.8, 0.08]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d([cos(x)*cos(y),cos(x)*sin(y),sin(x)], [x,0,2*%pi],[y,-%pi/2,%pi/2],[plot_format,xmaxima],[box,false], [palette,[hue, 0.5, 0.8, 0.8, 0.2]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Hyperbolic paraboloid */
+wxplot3d(x^2-(y^2),[x,-10,10],[y,-10,10], [plot_format,xmaxima],[box,false], [palette,[hue, 0.3, 0.8, 0.8, 0.1]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d([2*cos(x)+cos(y)*cos(x),2*sin(x)+cos(y)*sin(x),sin(y)], [x,0,2*%pi],[y,0,2*%pi],[plot_format,xmaxima],[box,false], [palette,[hue, 0.7, 0.8, 0.8, 0.1]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Cylinder */
+wxplot3d([cos(x),sin(x),y], [x,0,2*%pi],[y,-10,10],[plot_format,xmaxima],[box,false], [palette,[hue, 0.02, 0.8, 0.8, 0.1]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Ruled hyperboloid */
+wxplot3d([cos( y)-x*sin( y),sin( y)+x*cos( y),x],[x,-2,2], [y,0,2*%pi], [plot_format,xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Torus */
+wxplot3d([10*cos(x)+5*cos(x+y)*cos(x),10*sin(x)+5*cos(x+y)*sin(x),5*sin(x+y)], [x,0,2*%pi], [y,0,2*%pi],[plot_format, xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Ruled saddle chair */
+wxplot3d([y+x,y,2*x*y+x^2],[x,-100,100],[y,-50,50],[plot_format,xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Star with revolution */
+wxplot3d([(5*sin(x)- cos(4*x)),sin( y)*(5*cos(x)-sin(4*x)),cos( y)*(5*cos(x)-sin(4*x))], [x,0,2*%pi], [y,0,2*%pi],[plot_format, xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Apple */
+wxplot3d([5*cos(x)-3*cos(2*x),sin( y)*(5*sin(x)-3*sin(2*x)),cos( y)*(5*sin(x)-3*sin(2*x))],[x,0,2*%pi],[y,0,2*%pi],[plot_format,xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Möbius strip*/
+wxplot3d([3*cos(x)+ y*cos(x/2)*cos(x), 3*sin(x)+y*cos(x/2)*sin(x),y*sin(x/2)], [x,0,2*%pi],[y,-1,1],[plot_format, xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Star cylinder */
+wxplot3d([5*sin(x)- cos(4*x),5*cos(x)-sin(4*x),y],[x,0,2*%pi],[y,-1,1],[plot_format, xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Star fruit (carambolo) */
+wxplot3d([sin( y)*(5*sin(x)- cos(4*x)),sin( y)*(5*cos(x)-sin(4*x)),cos( y)], [x,0,2*%pi], [y,0,2*%pi],[plot_format, xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Heart cylinder */
+wxplot3d([5*cos(x)-2*cos(2*x),5*sin(x)-2*sin(2*x),y],[x,0,2*%pi],[y,-1,1],[plot_format,xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+/* Chinese lantern */
+wxplot3d([(5*sin(x)- cos(4*x)),sin( y)*(5*cos(x)-sin(4*x)),cos( y)*(5*cos(x)-sin(4*x))], [x,0,2*%pi], [y,0,2*%pi],[plot_format, xmaxima]);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$
